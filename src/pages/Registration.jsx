@@ -20,7 +20,7 @@ const Registration = () => {
 
   const [phone, setPhone] = useState('');
   const[phoneValid, setPhoneValid] =useState(false);
-  
+
   const userRef = useRef();
 
   useEffect(() => {
@@ -28,9 +28,28 @@ const Registration = () => {
   }, []);
   useEffect(()=>{
     const result = loginRgx.test(login);
-    console.log(result);
+    // console.log(result);
     setLoginValid(result)
-  },[])
+  },[login])  //omg Muslimaaaaaaa, shunaqayam xato qilasanmi a. ortda qolgani rost bo'lsin)))
+
+
+    useEffect(()=>{
+    const result = nameRgx.test(name);
+    // console.log(result);   //console'larni o'chirib chiqish esingdan chiqmasin! Hopbo'laddeeee
+    setNameValid(result)
+  },[name]);
+
+  useEffect(()=>{
+    const result = phoneRgx.test(phone)
+    // console.log(result);
+    setPhoneValid(result)
+  },[phone])
+
+   useEffect(()=>{
+    const result = pwdRgx.test(pwd)
+    // console.log(result);
+    setPwdValid(result)
+  },[pwd])
 
   const handleSubmit = (e) => {
     e.preventDefault();
