@@ -1,12 +1,21 @@
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import  Registration  from "./pages/Registration";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
+import Registration from "./pages/Registration";
+import Login from "./pages/Login";
 
 function App() {
-    return(
-        <Registration/>
-       
-    )
-    
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Registration />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
