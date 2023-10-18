@@ -13,7 +13,6 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your login logic here
   };
 
   return (
@@ -22,7 +21,10 @@ const Login = () => {
         <h1 className="text-2xl font-bold mb-4">Log In</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label htmlFor="username" className="block text-gray-700 text-sm font-bold mb-2">
+            <label
+              htmlFor="username"
+              className="block text-gray-700 text-sm font-bold mb-2"
+            >
               Login
             </label>
             <input
@@ -35,7 +37,10 @@ const Login = () => {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
+            <label
+              htmlFor="password"
+              className="block text-gray-700 text-sm font-bold mb-2"
+            >
               Password
             </label>
             <input
@@ -60,4 +65,3 @@ const Login = () => {
 };
 
 export default Login;
-

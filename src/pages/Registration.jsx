@@ -2,23 +2,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 
-// const loginRgx = /^[a-zA-Z0-9-_]{3,23}$/;
-// const pwdRgx = /^[a-zA-Z0-9]{4,30}$/;
-// const nameRgx = /^[a-zA-Z0-9-_]{3,23}$/;
-// const phoneRgx = /^[0-9]{10}$/;
-
 const Registration = () => {
   const [login, setLogin] = useState("");
-  // const [loginValid, setLoginValid] = useState(false);
 
   const [pwd, setPwd] = useState("");
-  // const [pwdValid, setPwdValid] = useState(false);
 
   const [name, setName] = useState("");
-  // const [nameValid, setNameValid] = useState(false);
 
   const [phone, setPhone] = useState("");
-  // const [phoneValid, setPhoneValid] = useState(false);
 
   const location = useLocation();
   console.log(location, "sss");
@@ -30,39 +21,9 @@ const Registration = () => {
   useEffect(() => {
     userRef.current.focus();
   }, []);
-  // useEffect(() => {
-  //   const result = loginRgx.test(login);
-  //   // console.log(result);
-  //   setLoginValid(result);
-  // }, [login]); //omg Muslimaaaaaaa, shunaqayam xato qilasanmi a. ortda qolgani rost bo'lsin)))
-
-  // useEffect(() => {
-  //   const result = nameRgx.test(name);
-  //   // console.log(result);   //console'larni o'chirib chiqish esingdan chiqmasin! Hop bo'laddeeee
-  //   setNameValid(result);
-  // }, [name]);
-
-  // useEffect(() => {
-  //   const result = phoneRgx.test(phone);
-  //   // console.log(result);
-  //   setPhoneValid(result);
-  // }, [phone]);
-
-  // useEffect(() => {
-  //   const result = pwdRgx.test(pwd);
-  //   // console.log(result);
-  //   setPwdValid(result);
-  // }, [pwd]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // const loginVal = loginRgx.test(login);
-    // const nameVal = nameRgx.test(name);
-    // const phoneVal = phoneRgx.test(phone);
-    // const pwdVal = pwdRgx.test(pwd);
-    // if (!loginVal || !nameVal) {
-    //   setErr("Invalid entry");
-    //   return;
 
     // console.log(success);
     // setSuccess(true);
@@ -108,8 +69,6 @@ const Registration = () => {
                 required
                 placeholder="Enter your login..."
                 onChange={(e) => setLogin(e.target.value)}
-                // pattern={loginRgx}
-                // onSubmit={handleSubmit} idk, o my goodneeeeeeeeeeeesssssssss
               />
             </div>
             <div>
@@ -120,7 +79,6 @@ const Registration = () => {
                 type="text"
                 className="w-full p-2 border rounded focus:outline-none focus:border-blue-500"
                 required
-                // pattern={nameRgx}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter your name..."
@@ -135,7 +93,6 @@ const Registration = () => {
                 type="tel"
                 className="w-full p-2 border rounded focus:outline-none focus:border-blue-500"
                 required
-                // pattern={phoneRgx}
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="Enter your phone number..."
@@ -154,7 +111,6 @@ const Registration = () => {
                 className="w-full p-2 border rounded focus:outline-none focus:border-blue-500"
                 required
                 placeholder="Enter your password..."
-                // pattern={pwdRgx}
                 onChange={(e) => setPwd(e.target.value)}
               />
             </div>
